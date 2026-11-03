@@ -57,7 +57,7 @@
 **方式一：复制目录**（推荐，能带上全部判定标准）
 
 ```bash
-git clone https://github.com/<your-name>/code-security-review.git
+git clone https://github.com/397814124my-wq/code-security-review.git
 
 # WorkBuddy / Claude Code（用户级，所有项目可用）
 cp -r code-security-review ~/.workbuddy/skills/
