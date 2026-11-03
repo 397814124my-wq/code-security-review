@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Code Security Review">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0E4AA8"/>
+      <stop offset="52%" stop-color="#0A3D91"/>
+      <stop offset="100%" stop-color="#2B1470"/>
+    </linearGradient>
+    <linearGradient id="shieldEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFC061"/>
+      <stop offset="100%" stop-color="#FF9D1A"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.42" r="0.52">
+      <stop offset="0%" stop-color="#3D6FD4" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0A3D91" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="112" ry="112" fill="url(#bg)"/>
+  <rect width="512" height="512" rx="112" ry="112" fill="url(#halo)"/>
+
+  <!-- 盾牌 -->
+  <path d="M256 88 L400 146 V274 C400 356 340 414 256 440 C172 414 112 356 112 274 V146 Z"
+        fill="#FFFFFF" fill-opacity="0.07"
+        stroke="url(#shieldEdge)" stroke-width="15" stroke-linejoin="round"
+        filter="url(#soft)"/>
+
+  <!-- 内层细线，增加层次 -->
+  <path d="M256 116 L374 162 V274 C374 340 328 388 256 412 C184 388 138 340 138 274 V162 Z"
+        fill="none" stroke="#FF9D1A" stroke-opacity="0.28" stroke-width="2"/>
+
+  <!-- 放大镜镜片 -->
+  <circle cx="252" cy="240" r="66" fill="#0A3D91" fill-opacity="0.35"
+          stroke="#FF9D1A" stroke-width="14"/>
+  <!-- 镜片高光 -->
+  <path d="M214 214 A54 54 0 0 1 252 190" fill="none" stroke="#FFC061"
+        stroke-opacity="0.55" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- 镜片内的代码尖括号 -->
+  <path d="M232 216 L206 240 L232 264" fill="none" stroke="#FFFFFF" stroke-width="12"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M272 216 L298 240 L272 264" fill="none" stroke="#FFFFFF" stroke-width="12"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 镜柄 -->
+  <path d="M300 292 L352 344" fill="none" stroke="url(#shieldEdge)" stroke-width="22"
+        stroke-linecap="round"/>
+
+  <!-- 底部三颗数据点，暗示规则命中 -->
+  <circle cx="196" cy="386" r="9" fill="#FF9D1A" fill-opacity="0.9"/>
+  <circle cx="256" cy="400" r="9" fill="#FF9D1A" fill-opacity="0.6"/>
+  <circle cx="316" cy="386" r="9" fill="#FF9D1A" fill-opacity="0.35"/>
+</svg>
